@@ -1,0 +1,271 @@
+/* Defining variables */
+:root {
+    --color-primary: #B1DBF3;
+    --color-secondary: #ffcfdf;
+    --color-dark: #21252F;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* Initializing elements */
+h1, h2, h3, h4, h5, h6, .display-1 {
+    color: var(--color-dark);   /* フォントの色 */
+    font-weight: 600;   /* フォントの太さ */
+}
+a {
+    text-decoration: none;  /* リンクが付いた文章（ハイパーリンク）の装飾の設定 */
+}
+img {
+    width: 100%;
+}
+
+/* ページ全体 */
+body {
+    font-family:Inter, "Noto Sans JP", "sans-serif";    /* フォント */
+    font-optical-sizing: auto;  /* フォント描写の最適化 */
+    font-style: normal; /* フォントスタイルの設定 */
+}
+section {
+    padding-top: 64px;  /* 各セクションの上の余白の大きさ */
+    padding-bottom: 64px;   /* 各セクションの下の余白の大きさ */
+}
+
+.card-effect {      /* カードのエフェクトの設定 */
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+li {
+    list-style: none;
+}
+
+/* Navigation Bar */
+.navbar .nav-link {
+    font-size: 14px;    /* Navigationのメニューのフォントサイズ */
+    font-weight: 600;   /* Navigationのメニューのフォントの太さ */
+}
+
+/* Top section */
+.hero {
+    background-image: url("../img/hero1.png");  /* トップの背景画像 */
+    background-position: center;    /* トップの背景画像をどこに揃えるか */
+    background-size: cover;     /* トップの背景画像の大きさ(coverは左右を画面幅に揃える) */
+    background-attachment: fixed;    /* 背景画像の位置の設定(fixedはスクロールしても位置が変わらない) */
+    position: relative;     /* 要素の配置の設定(relativeは相対位置) */
+    z-index: 2;     /* レイヤーの高さ */
+}
+.hero::after {  
+    content: "";    /* 特に意味はないけど,つけておかないとダメなやつ*/
+    position: absolute;     /* 要素の配置の設定(absoluteは絶対位置) */
+    width: 100%;    
+    height: 100%;
+    top: 0;     
+    left: 0;
+    background-color: rgba(37, 39, 71, 0.7);
+    z-index: -1;
+}
+
+/* Messages section */
+.message-box {
+    position: relative;
+    overflow: hidden;
+}
+.message-box::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+.message-box:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.iconbox {
+    width: 136px;
+    height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/user-template.png);
+    border-radius: 100px;
+}
+
+/* Map section */
+
+/* Schedule section */
+.schedule-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-box img {
+    transition: all 0.3s ease;
+}
+.schedule-box img:hover {
+    transform: scale(1.1);
+}
+
+.btn-close {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: white;
+    opacity: 1;
+}
+.btn-close:hover {
+    background-color: #f8f9fa;
+}
+
+/* Poster section */
+.poster-main {
+    display: flex;
+}
+
+.poster-main-detail {
+    text-align: center;
+    justify-content: center;
+}
+
+.card-custom {
+    max-width: 800px; /* カードの最大幅を設定 */
+    margin: 0 auto; /* 中央揃え */
+}
+.card-img-custom {
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    height: auto; /* アスペクト比を維持 */
+}
+.divider {
+    border-left: 1px solid #dee2e6; /* 左にボーダーを追加 */
+    border-bottom: 1px solid #dee2e6; /* 下にボーダーを追加 */
+    height: auto; /* 高さを自動調整 */
+    width: auto;
+}
+@media (min-width: 768px) { /* スマホ表示時設定 */
+    .card-img-custom {
+        max-width: 50%; /* 画像の最大幅をPCで適切に調整 */
+    }
+    .divider {
+        border-top: none; /* 上のボーダーを削除 */
+        border-left: 1px solid #dee2e6; /* 左にボーダーを追加 */
+        height: auto; /* 高さを自動調整 */
+    }
+}
+
+/* Event Rules section */
+.eventrule-box {
+    position: relative;
+    overflow: hidden;
+}
+.eventrule-box::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+.eventrule-box:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+/* Event Blogs section */
+.eventblog-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.eventblog-box::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+
+.eventblog-box:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.eventblog-imgbox {
+    position: relative;
+}
+
+.eventblog-box img {
+    width: 100%;
+    height: auto; /* 画像の高さを自動調整 */
+    transition: opacity 0.35s ease;
+}
+
+img.eventblog-img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.eventblog-box:hover img.eventblog-img-hover {
+    opacity: 1;
+}
+
+.eventblog-box:hover img.eventblog-img-default {
+    opacity: 0;
+}
+
+/* For Future Students section */
+.forfuturestudents-box {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+.forfuturestudents-box::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+.forfuturestudents-box:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.forfuturestudents-list {
+    padding: 8px;
+    list-style: outside;
+}
+
+/* Links section */
+.links-box {
+    margin: auto;
+}
+
+.links-img {
+    width: 100%;
+}
