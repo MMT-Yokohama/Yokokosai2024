@@ -1,7 +1,9 @@
 /* Defining variables */
 :root {
     --color-primary: #B1DBF3;
-    --color-secondary: #ffcfdf;
+    --color-secondary: #239adf;
+    --color-third: #dcebf3;
+    --color-attention: #ffcfdf;
     --color-dark: #21252F;
     --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
@@ -172,7 +174,7 @@ li {
     position: absolute;
     top: -100%;
     left: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--color-attention);
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -269,3 +271,248 @@ img.eventblog-img-hover {
 .links-img {
     width: 100%;
 }
+
+/* Footer Section */
+#footer {
+	position: relative;
+	margin-top: 150px;
+	padding-bottom: 25px;
+}
+#footer::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 76%;
+	height: 100%;
+	margin-left: 24%;
+	background-color: var(--color-third);
+	border-top-left-radius: 7px;
+	z-index: -10;
+}
+.page-top {
+	position: absolute;
+	top: -27px;
+	left: 50%;
+	width: 10px;
+	height: auto;
+	margin-left: -5px;
+}
+.footer-nav-list {
+	margin-bottom: 65px;
+	padding: 80px 40px 0 0;
+}
+.footer-nav-list li {
+	margin-bottom: 16px;
+	text-align: right;
+}
+.footer-nav-list li:last-child {
+	margin-bottom: 0;
+}
+.footer-nav-list li.fnav08 {
+	margin-bottom: 30px;
+}
+.footer-nav-list li a {
+	padding: 2px 6px;
+	background-color: #fff;
+    color: var(--color-dark);
+	transition: all .3s;
+}
+.footer-nav-list li a:hover {
+	background-color: var(--color-secondary);
+	color: #fff;
+}
+.footer-logo-area {
+	margin-bottom: 65px;
+	padding-left: 30px;
+}
+.footer-logo {
+	display: inline-block;
+	margin-bottom: 18px;
+}
+.footer-logo img {
+	width: 160px;
+	height: auto;
+}
+.footer-school-address {
+	font-size: 1.1rem;
+}
+.footer-copyright {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.0rem;
+	font-weight: 400;
+	transform: scale(0.8); 
+}
+
+@media only screen and (min-width: 576px) { /* tablet 576px - 991px */
+    #footer {
+        position: relative;
+        margin-top: 150px;
+        padding-bottom: 25px;
+    }
+    #footer::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 76%;
+        height: 100%;
+        margin-left: 24%;
+        background-color: var(--color-third);
+        border-top-left-radius: 7px;
+        z-index: -10;
+    }
+    .page-top {
+        position: absolute;
+        top: -27px;
+        left: 50%;
+        width: 10px;
+        height: auto;
+        margin-left: -5px;
+    }
+    .footer-nav-list {
+        margin-bottom: 65px;
+        padding: 80px 60px 0 0;
+    }
+    .footer-nav-list li {
+        margin-bottom: 16px;
+        text-align: right;
+    }
+    .footer-nav-list li:last-child {
+        margin-bottom: 0;
+    }
+    .footer-nav-list li.fnav08 {
+        margin-bottom: 30px;
+    }
+    .footer-nav-list li a {
+        padding: 2px 6px;
+        background-color: #fff;
+        color: var(--color-dark);
+        transition: all .3s;
+    }
+    .footer-nav-list li a:hover {
+        background-color: var(--color-secondary);
+        color: #fff;
+    }
+    .footer-logo-area {
+        margin-bottom: 65px;
+        padding-left: 60px;
+    }
+    .footer-logo {
+        display: inline-block;
+        margin-bottom: 18px;
+    }
+    .footer-logo img {
+        width: 160px;
+        height: auto;
+    }
+    .footer-school-address {
+        font-size: 1.1rem;
+    }
+    .footer-copyright {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.0rem;
+        font-weight: 400;
+        transform: scale(0.8); 
+    }
+}   /* Tablet size END */
+
+@media only screen and (min-width: 992px) { /* PC 992px - */
+    #footer {
+        position: relative;
+        margin-top: 210px;
+        padding: 190px 0 35px;
+    }
+    #footer::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 82%;
+        height: 100%;
+        margin-left: 18%;
+        background-color: var(--color-third);
+        border-top-left-radius: 7px;
+        z-index: -10;
+    }
+    .page-top {
+        position: absolute;
+        top: -27px;
+        left: 50%;
+        width: 10px;
+        height: auto;
+        margin-left: -5px;
+        transition: all .3s;
+    }
+    .page-top:hover {
+        position: absolute;
+        top: -34px;
+        left: 50%;
+    }
+    .footer-nav-list {
+        display: flex;
+        position: absolute;
+        top: -30px;
+        right: 100px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .footer-nav-list li {
+        width: 15px;
+        margin: 0 0 0 27px;
+        text-align: left;
+    }
+    .footer-nav-list li:last-child {
+        margin-bottom: 0;
+    }
+    .footer-nav-list li.fnav08 {
+        margin-bottom: 0;
+    }
+
+    .footer-nav-list li a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 5px 4px 5px;
+        background-color: #fff;
+        color: var(--color-dark);
+        font-size: 1.2rem;
+        line-height: 1.0;
+        letter-spacing: 0.12em;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        vertical-align: top;
+        transition: all .3s;
+    }
+    .footer-nav-list li a:hover {
+        background-color: var(--color-secondary);
+        color: #fff;
+    }
+
+    .footer-logo-area {
+        margin-bottom: 65px;
+        padding-left: 100px;
+    }
+    .footer-logo {
+        display: inline-block;
+        margin-bottom: 22px;
+    }
+    .footer-logo img {
+        width: 230px;
+        height: auto;
+    }
+    .footer-school-address {
+        font-size: 1.2rem;
+    }
+    .footer-copyright {
+        text-align: center;
+        font-size: 1.0rem;
+        font-weight: 400;
+        transform: scale(0.9); 
+    }
+}   /* PC size END */

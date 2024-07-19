@@ -462,7 +462,7 @@
     <!-- For Future Students Finish-->
     
     <!-- Links Section -->
-    <section>
+    <section id="links">
       <div class="container justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-8 links-box">
           <div class="row justify-content-center g-3">
@@ -497,13 +497,30 @@
     </section>
     <!-- Links Section Finish-->
     
-    <!-- Last Index Section -->
-    
-    <!-- Last Index Section Finish-->
-    
     <!-- Footer Section -->
-    
+    <footer id="footer">
+			<a href="#top" class="page-top"><img src="img/pagetop-arrow.svg" alt=""></a>
+			<ul class="footer-nav-list">
+				<li class="fnav01"><a href="#Top">トップ</a></li>
+				<li class="fnav02"><a href="#Messages">あいさつ</a></li>
+				<li class="fnav03"><a href="#Map">マップ</a></li>
+				<li class="fnav04"><a href="#Schedule">スケジュール</a></li>
+				<li class="fnav05"><a href="#Poster">ポスター</a></li>
+				<li class="fnav06"><a href="#EventRules">注意事項</a></li>
+        <li class="fnav07"><a href="#EventBlogs">イベントブログ</a></li>
+        <li class="fnav08"><a href="#ForFutureStudents">受験生へ</a></li>
+			</ul>
+			<div class="footer-logo-area">
+				<a href="https://www.yokohama-jsh.ac.jp/" class="footer-logo">横浜中学校・高等学校</a>
+				<p class="footer-school-address">〒236-0053<br>神奈川県横浜市金沢区能見台通46-1</p>
+			</div>
+			<p class="footer-copyright"><small>&copy; 1998-<span id="current-year"></span> Yokohama Junior &amp; Senior High School</small></p>
+		</footer>
     <!-- Footer Section Finish-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
   </body>
 </html>
